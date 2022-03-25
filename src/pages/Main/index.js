@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
 import { FaGithub, FaPlus, FaSpinner, FaBars, FaTrash } from 'react-icons/fa';
 import { Container, Form, SubmitButton, List, DeleteButton } from './styles';
 
@@ -11,11 +11,23 @@ export default function Main() {
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState(null);
 
+  // Busca repositórios salvos no localStorage
+  useEffect(()=> {
+    const repoStorage = localStorage.getItem('repos');
+    if (repoStorage) {
+      setRepositorios(JSON.parse(repoStorage));
+    }
+  }, []);
+
+  // Salva repositórios no localStorage
+  useEffect(()=> {
+    localStorage.setItem('repos', JSON.stringify(repositorios));
+  }, [repositorios]);
 
   const handleSubmit = useCallback((e)=> {
     e.preventDefault();
 
-    async function submit(){
+    async function submit() {
       setLoading(true);
       setAlert(null);
       try {
