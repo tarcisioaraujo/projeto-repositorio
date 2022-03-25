@@ -17,6 +17,11 @@ export default function Main() {
     async function submit(){
       setLoading(true);
       try {
+
+        if (newRepo === '') {
+          throw new Error('Você precisa indicar um repositório!');
+        }
+
         const response = await api.get(`repos/${newRepo}`);  
         const data = {
           name: response.data.full_name,
