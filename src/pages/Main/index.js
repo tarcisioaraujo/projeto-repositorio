@@ -23,6 +23,12 @@ export default function Main() {
         }
 
         const response = await api.get(`repos/${newRepo}`);  
+
+        const hasRepo = repositorios.find(repo => repo.name === newRepo);
+        if(hasRepo){
+          throw new Error('Repositório Duplicado');
+        }
+
         const data = {
           name: response.data.full_name,
         }    
@@ -52,13 +58,13 @@ export default function Main() {
     <Container>      
       <h1>
         <FaGithub size={25}/>
-        Meus Repositorios
+        Meus Repositórios
       </h1>
 
       <Form onSubmit={handleSubmit}>
         <input 
           type="text" 
-          placeholder="Adicionar Repositorios"
+          placeholder="Adicionar Repositórios"
           value={newRepo}
           onChange={handleinputChange}
         />
