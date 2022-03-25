@@ -9,6 +9,7 @@ export default function Main() {
   const [newRepo, setNewRepo] = useState('');
   const [repositorios, setRepositorios] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [alert, setAlert] = useState(null);
 
 
   const handleSubmit = useCallback((e)=> {
@@ -16,6 +17,7 @@ export default function Main() {
 
     async function submit(){
       setLoading(true);
+      setAlert(null);
       try {
 
         if (newRepo === '') {
@@ -34,6 +36,7 @@ export default function Main() {
         }    
         setRepositorios([...repositorios, data]);        
       } catch(error) {
+        setAlert(true);
         console.log(error);
       } finally {
         setNewRepo('');
@@ -61,7 +64,7 @@ export default function Main() {
         Meus Repositórios
       </h1>
 
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit} error={alert}>
         <input 
           type="text" 
           placeholder="Adicionar Repositórios"
