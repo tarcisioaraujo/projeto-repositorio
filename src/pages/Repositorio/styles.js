@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Loading = styled.div`
   color: #FFF;
@@ -41,4 +42,10 @@ export const Owner = styled.header`
     line-height: 1.4;
     max-width: 400px;
   }
+`;
+
+export const BackButton = styled(Link)`
+  border: 0;
+  outline: 0;
+  background: transparent;
 `;
