@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Container} from './styles';
+import {Container, Loading} from './styles';
 import api from '../../services/api';
 
 export default function Repositorio({match}) {
@@ -32,6 +32,14 @@ export default function Repositorio({match}) {
     load();
 
   }, [match.params.repositorio]);
+
+  if(loading){
+    return(
+      <Loading>
+        <h1>Carregando...</h1>
+      </Loading>
+    )
+  }
 
   return(
     <Container>
