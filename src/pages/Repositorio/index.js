@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Container, Loading} from './styles';
+import {Container, Loading, Owner} from './styles';
 import api from '../../services/api';
 
 export default function Repositorio({match}) {
@@ -43,7 +43,14 @@ export default function Repositorio({match}) {
 
   return(
     <Container>
-
+      <Owner>
+        <img 
+        src={repositorio.owner.avatar_url} 
+        alt={repositorio.owner.login} 
+        />
+        <h1>{repositorio.name}</h1>
+        <p>{repositorio.description}</p>
+      </Owner>
     </Container>
   )
 }
