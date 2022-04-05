@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+<h1 align="center">Projeto Meus Repositórios</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicação que "favorita" repositórios do GitHub no storage do navegador e que permite visualizar detalhes dos mesmos, como avatar, issues, status das issues e seus respectivos autores.
 
-## Available Scripts
+<p align="center">	
+	<img src="https://img.shields.io/github/license/tarcisioaraujo/blog-laravel-vue" alt="License">	 
+</p>
 
-In the project directory, you can run:
+<p align="center">
+	<a href="#computer-tecnologias">Tecnologias</a> •	
+	<a href="#white_check_mark-features">Features</a> •
+	<a href="#runner-começando">Começando</a> •
+	<a href="#warning-pré-requisitos">Pré-requisitos</a> •	
+	<a href="#hammer_and_wrench-instalação">Instalação</a> •	
+	<a href="#construction_worker-autor">Autor</a> •
+	<a href="#memo-licença">Licença</a>
+</p>
 
-### `npm start`
+<p align="center">
+	<kbd>
+		<img alt="Repositórios Favoritos" title="#RepositoriosFavoritos" width="748" height="534" style="border-radius: 5px" src="./assets/repositorios_favoritos.png">
+	</kbd>
+	<br/><br/>
+	<kbd>
+		<img alt="Detalhe Repositório" title="#DetalheRepositorio" width="748" height="728" style="border-radius: 5px" src="./assets/detalhe_repositorio_favorito.png">
+	</kbd>		
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## :computer: Tecnologias 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [React](https://pt-br.reactjs.org/)
+- [Axios](https://axios-http.com/ptbr/docs/intro)
+- [React Router](https://reactrouter.com/)
+- [Styled Components](https://styled-components.com/)
 
-### `npm test`
+## :white_check_mark: Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [x] Listar repositórios
+- [x] Persistir repositório no storage do navegador
+- [x] Obter e exibir detalhes
+- [x] Obter e exibir issues
+- [x] Issues paginadas
+- [x] Filtros por status para as issues
 
-### `npm run build`
+## :runner: Começando 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Essas instruções fornecerão uma cópia do projeto instalado e funcionando em sua máquina local.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## :warning: Pré-requisitos 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+O que você precisar para instalar a aplicação
 
-### `npm run eject`
+```
+Node >= 10.15.0
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## :hammer_and_wrench: Instalação
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Passos para rodar a aplicação
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+# Clonar
+git clone https://github.com/tarcisioaraujo/projeto-repositorio
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Acessar o diretório
+cd projeto-repositorio
 
-## Learn More
+# Instalar as dependências do Node JS (leva alguns minutos ☕)
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Rodar servidor React
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Acessar o endereço 
+http://localhost:3000/
+```
 
-### Code Splitting
+## :construction_worker: Autor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<a href="https://github.com/tarcisioaraujo">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/47223046?v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Tarcísio Silva de Araújo</b></sub></a> <a href="https://github.com/tarcisioaraujo" title="GitHub"></a>
 
-### Analyzing the Bundle Size
+Feito por Tarcísio Silva de Araújo 👋
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[![Linkedin Badge](https://img.shields.io/badge/-Tarcísio-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tarcisiosaraujo/)](https://www.linkedin.com/in/tarcisiosaraujo/) 
+[![Gmail Badge](https://img.shields.io/badge/-tarcisio.saraujo@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:tarcisio.saraujo@gmail.com)](mailto:tarcisio.saraujo@gmail.com)
 
-### Making a Progressive Web App
+## :memo: Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto esta sobe a licença [MIT](./LICENSE).
