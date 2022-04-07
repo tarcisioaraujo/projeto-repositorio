@@ -3,7 +3,7 @@
 Aplicação que "favorita" repositórios do GitHub no storage do navegador e que permite visualizar detalhes dos mesmos, como avatar, issues, status das issues e seus respectivos autores.
 
 <p align="center">	
-	<img src="https://img.shields.io/github/license/tarcisioaraujo/blog-laravel-vue" alt="License">	 
+	<img src="https://img.shields.io/github/license/tarcisioaraujo/projeto-repositorio" alt="License">	 
 </p>
 
 <p align="center">
